@@ -11,7 +11,7 @@
 
 - name: download tomcat tar
   get_url:
-          url: https://www-eu.apache.org/dist/tomcat/tomcat-9/v{{version}}/bin/apache-tomcat-{{version}}.tar.gz
+          url: https://downloads.apache.org/tomcat/tomcat-10/v{{version}}/bin/apache-tomcat-{{version}}.tar.gz
           dest: /tmp
 
 - name: untar
@@ -48,13 +48,13 @@
           src: templates/service.j2
           dest: /etc/systemd/system/tomcat.service
 
-- name: enabling the tomcat servie
+- name: enabling the tomcat service
   systemd:
     name: tomcat
     daemon_reload: yes
     enabled: True
 
-- name: restart the tomcat servie
+- name: restart the tomcat service
   systemd:
     name: tomcat
     state: restarted
