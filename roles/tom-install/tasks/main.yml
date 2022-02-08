@@ -16,13 +16,13 @@
 
 - name: untar
   unarchive:
-          src: /tmp/apache-tomcat-{{ version }}.tar.gz
+          src: /tmp/apache-tomcat-{{version}}.tar.gz
           dest: /opt/tomcat
           remote_src: yes
 
 - name: create symbolic link
   file: 
-        src: /opt/tomcat/apache-tomcat-{{ version }}
+        src: /opt/tomcat/apache-tomcat-{{version}}
         dest: /opt/tomcat/latest
         state: link
 
