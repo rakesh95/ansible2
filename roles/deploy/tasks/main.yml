@@ -1,13 +1,13 @@
 ---
 - name: copy the war file into webapps
   get_url:
-    url: https://github.com/tejesh555/applogin/raw/master/target/applogin.war
+    url: https://github.com/rakesh95/applogin/raw/master/target/applogin-1.2.war
     dest: /tmp
     
 - name: copy artifact 
   copy:
-     src: /tmp/applogin.war
-     dest: /opt/tomcat/latest/webapps/applogin.war
+     src: /tmp/applogin-1.2.war
+     dest: /opt/tomcat/latest/webapps/applogin-1.2.war
      owner: tomcat
      group: tomcat
      remote_src: yes
