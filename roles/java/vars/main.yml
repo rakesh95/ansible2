@@ -1,4 +1,4 @@
 ---
 java_deb: default-jdk
-java_rhel: sudo yum install java-11-openjdk-devel
+java_rhel: java-11-openjdk-devel
 # vars file for java
